@@ -587,9 +587,16 @@ class Home extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 10),
-                        Image.asset(
-                          "assets/Rectangle 412.png",
-                          fit: BoxFit.contain,
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          clipBehavior: Clip.hardEdge,
+                          child: Image.asset(
+                            "assets/Rectangle 412.png",
+                            fit: BoxFit.cover,
+                          ),
                         )
                       ],
                     ),
